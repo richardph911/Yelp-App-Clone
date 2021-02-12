@@ -19,7 +19,7 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     // –––––– TODO: Initialize restaurantsArray
-    var restaurantsArray: [[String: Any?]] = []
+    var restaurantsArray: [Restaurant] = []
     
     
     // ––––– TODO: Add tableView datasource + delegate
@@ -35,12 +35,12 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     
     // ––––– TODO: Get data from API helper and retrieve restaurants
     func getAPIData(){
-        print("hello")
+    
         API.getRestaurants(){ (restaurants) in
             guard let restaurants = restaurants else {
                 return
             }
-            print("2342")
+           
             print(restaurants)
             self.restaurantsArray = restaurants
             self.tableView.reloadData() //reload data
@@ -50,17 +50,26 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurantsArray.count
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell){
+            let r = restaurantsArray[indexPath.row]
+            let detailViewController = segue.destination as! RestaurantDetailViewController
+            detailViewController.r = r
+        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell") as! RestaurantCell
         
         let restaurant = restaurantsArray[indexPath.row]
+        cell.r = restaurant
         
-        cell.label.text = restaurant["name"] as? String ?? ""
-        if let imageUrlString = restaurant["image_url"] as? String {
-            let imageUrl = URL(string: imageUrlString)
-            cell.restaurantImage.af.setImage(withURL: imageUrl!)
-        }
+//        cell.nameLabel.text = restaurant["name"] as? String ?? ""
+//        if let imageUrlString = restaurant["image_url"] as? String {
+//            let imageUrl = URL(string: imageUrlString)
+//            cell.restaurantImage.af.setImage(withURL: imageUrl!)
+//        }
         return cell
     }
     
