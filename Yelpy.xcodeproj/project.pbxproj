@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		242D5A1925D63CC200B3AD59 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D5A1825D63CC200B3AD59 /* Restaurant.swift */; };
-		242D5A2025D641FA00B3AD59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 242D5A1F25D641FA00B3AD59 /* Assets.xcassets */; };
 		242D5A2525D64AF300B3AD59 /* YelpStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D5A2425D64AF300B3AD59 /* YelpStars.swift */; };
 		242D5A2825D6505400B3AD59 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D5A2725D6505400B3AD59 /* RestaurantDetailViewController.swift */; };
+		24A132E325E8C72000401639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A132E225E8C72000401639 /* Assets.xcassets */; };
+		24A132E825E8C85000401639 /* stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A132E525E8C85000401639 /* stars.swift */; };
+		24A132E925E8C85000401639 /* FileSubviewsSkeletonables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A132E625E8C85000401639 /* FileSubviewsSkeletonables.swift */; };
+		24A132EA25E8C85000401639 /* 4762-food-carousel.json in Resources */ = {isa = PBXBuildFile; fileRef = 24A132E725E8C85000401639 /* 4762-food-carousel.json */; };
 		24AB3F1525CDD82700FB3494 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB3F1425CDD82700FB3494 /* RestaurantCell.swift */; };
 		BB47B3AA247739640029FFF6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47B3A9247739640029FFF6 /* API.swift */; };
 		BB47B3AF2477426A0029FFF6 /* exampleAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = BB47B3AE2477426A0029FFF6 /* exampleAPI.json */; };
@@ -24,9 +27,12 @@
 
 /* Begin PBXFileReference section */
 		242D5A1825D63CC200B3AD59 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		242D5A1F25D641FA00B3AD59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/yelpy_starter_2/Yelpy/Assets.xcassets; sourceTree = "<group>"; };
 		242D5A2425D64AF300B3AD59 /* YelpStars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpStars.swift; sourceTree = "<group>"; };
 		242D5A2725D6505400B3AD59 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		24A132E225E8C72000401639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Yelpy/Assets.xcassets; sourceTree = "<group>"; };
+		24A132E525E8C85000401639 /* stars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stars.swift; sourceTree = "<group>"; };
+		24A132E625E8C85000401639 /* FileSubviewsSkeletonables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSubviewsSkeletonables.swift; sourceTree = "<group>"; };
+		24A132E725E8C85000401639 /* 4762-food-carousel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4762-food-carousel.json"; sourceTree = "<group>"; };
 		24AB3F1425CDD82700FB3494 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		4ED4C73FD51FDFC62216E5DE /* Pods-Yelpy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelpy.debug.xcconfig"; path = "Target Support Files/Pods-Yelpy/Pods-Yelpy.debug.xcconfig"; sourceTree = "<group>"; };
 		4F45387EF0BCD4FD0EAD369F /* Pods_Yelpy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yelpy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +80,9 @@
 		242D5A2325D64ACA00B3AD59 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
+				24A132E725E8C85000401639 /* 4762-food-carousel.json */,
+				24A132E625E8C85000401639 /* FileSubviewsSkeletonables.swift */,
+				24A132E525E8C85000401639 /* stars.swift */,
 				242D5A2425D64AF300B3AD59 /* YelpStars.swift */,
 			);
 			path = Extra;
@@ -124,6 +133,7 @@
 		BBEBF0FF247738A50044AFE0 = {
 			isa = PBXGroup;
 			children = (
+				24A132E225E8C72000401639 /* Assets.xcassets */,
 				BBEBF10A247738A50044AFE0 /* Yelpy */,
 				BBEBF109247738A50044AFE0 /* Products */,
 				2344D15B0FAC56D7DA5C2A30 /* Pods */,
@@ -143,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				242D5A2325D64ACA00B3AD59 /* Extra */,
-				242D5A1F25D641FA00B3AD59 /* Assets.xcassets */,
 				242D5A1725D63CAF00B3AD59 /* Models */,
 				BBEBF10B247738A50044AFE0 /* AppDelegate.swift */,
 				BBEBF10D247738A50044AFE0 /* SceneDelegate.swift */,
@@ -218,9 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBEBF118247738A50044AFE0 /* LaunchScreen.storyboard in Resources */,
+				24A132EA25E8C85000401639 /* 4762-food-carousel.json in Resources */,
 				BB47B3AF2477426A0029FFF6 /* exampleAPI.json in Resources */,
+				24A132E325E8C72000401639 /* Assets.xcassets in Resources */,
 				BB47B3B82477565E0029FFF6 /* Main.storyboard in Resources */,
-				242D5A2025D641FA00B3AD59 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,10 +287,12 @@
 				BBEBF110247738A50044AFE0 /* RestaurantsViewController.swift in Sources */,
 				242D5A2825D6505400B3AD59 /* RestaurantDetailViewController.swift in Sources */,
 				242D5A1925D63CC200B3AD59 /* Restaurant.swift in Sources */,
+				24A132E925E8C85000401639 /* FileSubviewsSkeletonables.swift in Sources */,
 				BB47B3AA247739640029FFF6 /* API.swift in Sources */,
 				BBEBF10C247738A50044AFE0 /* AppDelegate.swift in Sources */,
 				BBEBF10E247738A50044AFE0 /* SceneDelegate.swift in Sources */,
 				242D5A2525D64AF300B3AD59 /* YelpStars.swift in Sources */,
+				24A132E825E8C85000401639 /* stars.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
