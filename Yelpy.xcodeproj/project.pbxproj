@@ -15,6 +15,9 @@
 		24A132E925E8C85000401639 /* FileSubviewsSkeletonables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A132E625E8C85000401639 /* FileSubviewsSkeletonables.swift */; };
 		24A132EA25E8C85000401639 /* 4762-food-carousel.json in Resources */ = {isa = PBXBuildFile; fileRef = 24A132E725E8C85000401639 /* 4762-food-carousel.json */; };
 		24AB3F1525CDD82700FB3494 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB3F1425CDD82700FB3494 /* RestaurantCell.swift */; };
+		24B56DDC25F22261009B5FB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B56DDB25F22261009B5FB9 /* LoginViewController.swift */; };
+		24B56DDF25F22E02009B5FB9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B56DDE25F22E02009B5FB9 /* ChatViewController.swift */; };
+		24B56DE225F232CB009B5FB9 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B56DE125F232CB009B5FB9 /* ChatCell.swift */; };
 		BB47B3AA247739640029FFF6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47B3A9247739640029FFF6 /* API.swift */; };
 		BB47B3AF2477426A0029FFF6 /* exampleAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = BB47B3AE2477426A0029FFF6 /* exampleAPI.json */; };
 		BB47B3B82477565E0029FFF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB47B3B62477565E0029FFF6 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 		24A132E625E8C85000401639 /* FileSubviewsSkeletonables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSubviewsSkeletonables.swift; sourceTree = "<group>"; };
 		24A132E725E8C85000401639 /* 4762-food-carousel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4762-food-carousel.json"; sourceTree = "<group>"; };
 		24AB3F1425CDD82700FB3494 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		24B56DDB25F22261009B5FB9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		24B56DDE25F22E02009B5FB9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		24B56DE125F232CB009B5FB9 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		4ED4C73FD51FDFC62216E5DE /* Pods-Yelpy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelpy.debug.xcconfig"; path = "Target Support Files/Pods-Yelpy/Pods-Yelpy.debug.xcconfig"; sourceTree = "<group>"; };
 		4F45387EF0BCD4FD0EAD369F /* Pods_Yelpy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yelpy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F962A73D0A55B6E930DC45 /* Pods-Yelpy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelpy.release.xcconfig"; path = "Target Support Files/Pods-Yelpy/Pods-Yelpy.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +94,15 @@
 			path = Extra;
 			sourceTree = "<group>";
 		};
+		24B56DDA25F22209009B5FB9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				24B56DDB25F22261009B5FB9 /* LoginViewController.swift */,
+				24B56DDE25F22E02009B5FB9 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		7D8BA013843B8AF0BF0FE308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +122,7 @@
 		BB47B3AC247739890029FFF6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				24B56DDA25F22209009B5FB9 /* Chat */,
 				BBEBF10F247738A50044AFE0 /* RestaurantsViewController.swift */,
 				242D5A2725D6505400B3AD59 /* RestaurantDetailViewController.swift */,
 			);
@@ -126,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				24AB3F1425CDD82700FB3494 /* RestaurantCell.swift */,
+				24B56DE125F232CB009B5FB9 /* ChatCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -293,6 +310,9 @@
 				BBEBF10E247738A50044AFE0 /* SceneDelegate.swift in Sources */,
 				242D5A2525D64AF300B3AD59 /* YelpStars.swift in Sources */,
 				24A132E825E8C85000401639 /* stars.swift in Sources */,
+				24B56DE225F232CB009B5FB9 /* ChatCell.swift in Sources */,
+				24B56DDF25F22E02009B5FB9 /* ChatViewController.swift in Sources */,
+				24B56DDC25F22261009B5FB9 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
