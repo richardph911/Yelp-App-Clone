@@ -10,6 +10,8 @@
 		242D5A1925D63CC200B3AD59 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D5A1825D63CC200B3AD59 /* Restaurant.swift */; };
 		242D5A2525D64AF300B3AD59 /* YelpStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D5A2425D64AF300B3AD59 /* YelpStars.swift */; };
 		242D5A2825D6505400B3AD59 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D5A2725D6505400B3AD59 /* RestaurantDetailViewController.swift */; };
+		24641D0B25FB426500F5B03B /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24641D0A25FB426500F5B03B /* PostImageViewController.swift */; };
+		24641D0E25FB466300F5B03B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24641D0D25FB466300F5B03B /* MapKit.framework */; };
 		24A132E325E8C72000401639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A132E225E8C72000401639 /* Assets.xcassets */; };
 		24A132E825E8C85000401639 /* stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A132E525E8C85000401639 /* stars.swift */; };
 		24A132E925E8C85000401639 /* FileSubviewsSkeletonables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A132E625E8C85000401639 /* FileSubviewsSkeletonables.swift */; };
@@ -32,6 +34,8 @@
 		242D5A1825D63CC200B3AD59 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		242D5A2425D64AF300B3AD59 /* YelpStars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpStars.swift; sourceTree = "<group>"; };
 		242D5A2725D6505400B3AD59 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		24641D0A25FB426500F5B03B /* PostImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageViewController.swift; sourceTree = "<group>"; };
+		24641D0D25FB466300F5B03B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		24A132E225E8C72000401639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Yelpy/Assets.xcassets; sourceTree = "<group>"; };
 		24A132E525E8C85000401639 /* stars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stars.swift; sourceTree = "<group>"; };
 		24A132E625E8C85000401639 /* FileSubviewsSkeletonables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSubviewsSkeletonables.swift; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24641D0E25FB466300F5B03B /* MapKit.framework in Frameworks */,
 				DEB0D3CBF2C6E48DC3500274 /* Pods_Yelpy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +99,16 @@
 			path = Extra;
 			sourceTree = "<group>";
 		};
+		24641D0825FB423000F5B03B /* MainFeed */ = {
+			isa = PBXGroup;
+			children = (
+				BBEBF10F247738A50044AFE0 /* RestaurantsViewController.swift */,
+				242D5A2725D6505400B3AD59 /* RestaurantDetailViewController.swift */,
+				24641D0A25FB426500F5B03B /* PostImageViewController.swift */,
+			);
+			path = MainFeed;
+			sourceTree = "<group>";
+		};
 		24B56DDA25F22209009B5FB9 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +121,7 @@
 		7D8BA013843B8AF0BF0FE308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24641D0D25FB466300F5B03B /* MapKit.framework */,
 				4F45387EF0BCD4FD0EAD369F /* Pods_Yelpy.framework */,
 			);
 			name = Frameworks;
@@ -123,8 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				24B56DDA25F22209009B5FB9 /* Chat */,
-				BBEBF10F247738A50044AFE0 /* RestaurantsViewController.swift */,
-				242D5A2725D6505400B3AD59 /* RestaurantDetailViewController.swift */,
+				24641D0825FB423000F5B03B /* MainFeed */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -312,6 +327,7 @@
 				24A132E825E8C85000401639 /* stars.swift in Sources */,
 				24B56DE225F232CB009B5FB9 /* ChatCell.swift in Sources */,
 				24B56DDF25F22E02009B5FB9 /* ChatViewController.swift in Sources */,
+				24641D0B25FB426500F5B03B /* PostImageViewController.swift in Sources */,
 				24B56DDC25F22261009B5FB9 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

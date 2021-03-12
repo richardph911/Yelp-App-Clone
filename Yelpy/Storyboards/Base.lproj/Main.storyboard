@@ -172,16 +172,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lrf-Hm-8Lm" userLabel="Header Image">
-                                <rect key="frame" x="0.0" y="56" width="414" height="303"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="168.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future: Add Map that takes you to MapViewController Similar to Yelp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-s4-xwc">
-                                <rect key="frame" x="8" y="391" width="398" height="57.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uOw-mk-KrB">
-                                <rect key="frame" x="16" y="250" width="382" height="93"/>
+                                <rect key="frame" x="16" y="115.5" width="382" height="93"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2O-iS-7Wi">
                                         <rect key="frame" x="0.0" y="0.0" width="204.5" height="48"/>
@@ -209,34 +203,88 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rKP-HL-kfh">
+                                <rect key="frame" x="0.0" y="224.5" width="414" height="534.5"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ayN-sh-FSR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="uOw-mk-KrB" firstAttribute="leading" secondItem="ayN-sh-FSR" secondAttribute="leading" constant="16" id="7wg-9q-Isg"/>
-                            <constraint firstItem="cAe-s4-xwc" firstAttribute="leading" secondItem="ayN-sh-FSR" secondAttribute="leading" constant="8" id="8bK-jf-pxS"/>
-                            <constraint firstItem="ayN-sh-FSR" firstAttribute="trailing" secondItem="cAe-s4-xwc" secondAttribute="trailing" constant="8" id="8z2-zi-dZf"/>
-                            <constraint firstItem="cAe-s4-xwc" firstAttribute="top" secondItem="Lrf-Hm-8Lm" secondAttribute="bottom" constant="32" id="93l-Pz-ahS"/>
+                            <constraint firstItem="rKP-HL-kfh" firstAttribute="leading" secondItem="ayN-sh-FSR" secondAttribute="leading" id="GWg-sw-OwF"/>
+                            <constraint firstItem="rKP-HL-kfh" firstAttribute="bottom" secondItem="ayN-sh-FSR" secondAttribute="bottom" id="Gao-75-q1e"/>
                             <constraint firstItem="Lrf-Hm-8Lm" firstAttribute="leading" secondItem="ayN-sh-FSR" secondAttribute="leading" id="Lg6-ae-5Qg"/>
                             <constraint firstItem="Lrf-Hm-8Lm" firstAttribute="trailing" secondItem="ayN-sh-FSR" secondAttribute="trailing" id="MtW-6H-WAQ"/>
                             <constraint firstItem="ayN-sh-FSR" firstAttribute="trailing" secondItem="uOw-mk-KrB" secondAttribute="trailing" constant="16" id="ayk-rG-Gsq"/>
+                            <constraint firstItem="rKP-HL-kfh" firstAttribute="top" secondItem="Lrf-Hm-8Lm" secondAttribute="bottom" id="bNe-7N-r6D"/>
                             <constraint firstItem="Lrf-Hm-8Lm" firstAttribute="width" secondItem="bYI-h6-naQ" secondAttribute="width" id="csf-Bf-z6v"/>
                             <constraint firstItem="Lrf-Hm-8Lm" firstAttribute="top" secondItem="ayN-sh-FSR" secondAttribute="top" id="eEC-pq-0OU"/>
-                            <constraint firstItem="Lrf-Hm-8Lm" firstAttribute="height" secondItem="bYI-h6-naQ" secondAttribute="height" multiplier="0.36" id="lOx-Jk-RHt"/>
+                            <constraint firstItem="Lrf-Hm-8Lm" firstAttribute="height" secondItem="bYI-h6-naQ" secondAttribute="height" multiplier="0.2" id="lOx-Jk-RHt"/>
+                            <constraint firstItem="rKP-HL-kfh" firstAttribute="trailing" secondItem="ayN-sh-FSR" secondAttribute="trailing" id="lrh-Pn-2Ea"/>
                             <constraint firstItem="uOw-mk-KrB" firstAttribute="bottom" secondItem="Lrf-Hm-8Lm" secondAttribute="bottom" constant="-16" id="oam-yR-haF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SOn-IY-pan"/>
                     <connections>
                         <outlet property="headerImage" destination="Lrf-Hm-8Lm" id="XSw-0u-EJd"/>
+                        <outlet property="mapView" destination="rKP-HL-kfh" id="AgF-QG-GWo"/>
                         <outlet property="nameLabel" destination="J2O-iS-7Wi" id="SBb-IV-YIV"/>
                         <outlet property="reviewsLabel" destination="FXs-NI-MoA" id="wuT-QM-dAq"/>
                         <outlet property="starImage" destination="EIw-GB-cXw" id="VOZ-Z8-yEv"/>
+                        <segue destination="W9A-Q9-81W" kind="show" identifier="toPostImageVC" id="hQ7-Hc-6Rq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fO-Tz-ZRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="-441"/>
+            <point key="canvasLocation" x="1915.9420289855075" y="-442.63392857142856"/>
+        </scene>
+        <!--Post Image View Controller-->
+        <scene sceneID="gMj-Nd-YEO">
+            <objects>
+                <viewController id="W9A-Q9-81W" customClass="PostImageViewController" customModule="Yelpy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nyY-QD-vv3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uCb-kD-pOZ">
+                                <rect key="frame" x="87" y="109" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Ngw-ni-Gb9"/>
+                                    <constraint firstAttribute="width" constant="240" id="ple-eD-IW2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f53-EG-tB6">
+                                <rect key="frame" x="101" y="375" width="212" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Finish Posting Image">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="on:" destination="W9A-Q9-81W" eventType="touchUpInside" id="9Dy-S7-OW6"/>
+                                    <action selector="onFinishPosting:" destination="W9A-Q9-81W" eventType="touchUpInside" id="E2X-Oq-6bB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dd8-pc-w5U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f53-EG-tB6" firstAttribute="leading" secondItem="Dd8-pc-w5U" secondAttribute="leading" constant="8" id="IMo-sF-bEn"/>
+                            <constraint firstItem="uCb-kD-pOZ" firstAttribute="leading" secondItem="Dd8-pc-w5U" secondAttribute="leading" constant="87" id="XDQ-ss-uBf"/>
+                            <constraint firstItem="f53-EG-tB6" firstAttribute="top" secondItem="uCb-kD-pOZ" secondAttribute="bottom" constant="43" id="hnA-00-ymR"/>
+                            <constraint firstItem="uCb-kD-pOZ" firstAttribute="top" secondItem="Dd8-pc-w5U" secondAttribute="top" constant="53" id="kiW-Z0-9no"/>
+                            <constraint firstItem="Dd8-pc-w5U" firstAttribute="trailing" secondItem="uCb-kD-pOZ" secondAttribute="trailing" constant="87" id="y5P-rn-0nb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="G1W-nS-eBy"/>
+                    <connections>
+                        <outlet property="onFinishPosting" destination="f53-EG-tB6" id="cOL-CU-SYl"/>
+                        <outlet property="selectedImageView" destination="uCb-kD-pOZ" id="Q5d-bG-wpV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5G-xq-Ulj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2759" y="-425"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="Xnu-cg-EB2">
@@ -512,11 +560,17 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
