@@ -231,7 +231,7 @@
                         <outlet property="nameLabel" destination="J2O-iS-7Wi" id="SBb-IV-YIV"/>
                         <outlet property="reviewsLabel" destination="FXs-NI-MoA" id="wuT-QM-dAq"/>
                         <outlet property="starImage" destination="EIw-GB-cXw" id="VOZ-Z8-yEv"/>
-                        <segue destination="W9A-Q9-81W" kind="show" identifier="toPostImageVC" id="hQ7-Hc-6Rq"/>
+                        <segue destination="W9A-Q9-81W" kind="show" identifier="toPostImageVC" id="C5h-lv-qJu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fO-Tz-ZRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -254,35 +254,37 @@
                                     <constraint firstAttribute="width" constant="240" id="ple-eD-IW2"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f53-EG-tB6">
-                                <rect key="frame" x="101" y="375" width="212" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f53-EG-tB6">
+                                <rect key="frame" x="8" y="392" width="398" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Finish Posting Image">
                                     <color key="titleColor" systemColor="systemBlueColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="on:" destination="W9A-Q9-81W" eventType="touchUpInside" id="9Dy-S7-OW6"/>
-                                    <action selector="onFinishPosting:" destination="W9A-Q9-81W" eventType="touchUpInside" id="E2X-Oq-6bB"/>
+                                    <action selector="onFinishPosting:" destination="W9A-Q9-81W" eventType="touchUpInside" id="oEh-eR-0hi"/>
+                                    <segue destination="Fzy-dM-dZu" kind="unwind" identifier="unwindToDetail" unwindAction="unwind:" id="tYA-yh-Oor"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dd8-pc-w5U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Dd8-pc-w5U" firstAttribute="trailing" secondItem="f53-EG-tB6" secondAttribute="trailing" constant="8" id="6hk-AN-IMr"/>
                             <constraint firstItem="f53-EG-tB6" firstAttribute="leading" secondItem="Dd8-pc-w5U" secondAttribute="leading" constant="8" id="IMo-sF-bEn"/>
                             <constraint firstItem="uCb-kD-pOZ" firstAttribute="leading" secondItem="Dd8-pc-w5U" secondAttribute="leading" constant="87" id="XDQ-ss-uBf"/>
                             <constraint firstItem="f53-EG-tB6" firstAttribute="top" secondItem="uCb-kD-pOZ" secondAttribute="bottom" constant="43" id="hnA-00-ymR"/>
                             <constraint firstItem="uCb-kD-pOZ" firstAttribute="top" secondItem="Dd8-pc-w5U" secondAttribute="top" constant="53" id="kiW-Z0-9no"/>
+                            <constraint firstItem="f53-EG-tB6" firstAttribute="leading" secondItem="Dd8-pc-w5U" secondAttribute="leading" constant="8" id="mMQ-pY-nSn"/>
                             <constraint firstItem="Dd8-pc-w5U" firstAttribute="trailing" secondItem="uCb-kD-pOZ" secondAttribute="trailing" constant="87" id="y5P-rn-0nb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G1W-nS-eBy"/>
                     <connections>
-                        <outlet property="onFinishPosting" destination="f53-EG-tB6" id="cOL-CU-SYl"/>
                         <outlet property="selectedImageView" destination="uCb-kD-pOZ" id="Q5d-bG-wpV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5G-xq-Ulj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Fzy-dM-dZu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2759" y="-425"/>
         </scene>

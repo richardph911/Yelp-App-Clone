@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import MapKit
 
-class RestaurantDetailViewController: UIViewController, MKMapViewDelegate{
+class RestaurantDetailViewController: UIViewController, MKMapViewDelegate, PostImageViewControllerDelegate{
 
     @IBOutlet weak var starImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -45,7 +45,7 @@ class RestaurantDetailViewController: UIViewController, MKMapViewDelegate{
         if segue.identifier == "toPostImageVC" {
             let postImageVC = segue.destination as! PostImageViewController
             // NOTE: PLEASE FOLLOW LAB BEFORE ASKING FOR HELP ON THIS
-//            postImageVC.delegate = self
+            postImageVC.delegate = self
         }
     }
     
@@ -91,25 +91,40 @@ class RestaurantDetailViewController: UIViewController, MKMapViewDelegate{
     }
     
     // MARK: 8) Configure annotation view using protocol method
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        return mapView.dequeueReusableAnnotationView(withIdentifier: "removeMe")
-        
-    }
+      func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let reuseID = "myAnnotationView"
+        print("mapView protocol called!")
+        self.annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseID)
+        if (annotationView == nil){
+          // MARK: USE MKPinAnnotationView and NOT MKAnnotationView
+          annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseID)
+          annotationView?.canShowCallout = true
+          // 9) Add info button to annotation view
+          let annotationViewButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+          annotationViewButton.setImage(UIImage(named: "camera"), for: .normal)
+          annotationView?.leftCalloutAccessoryView = annotationViewButton
+        }
+    //    let imageView = annotationView?.leftCalloutAccessoryView as! UIImageView
+    //
+    //    imageView.image = UIImage(named: "camera")
+        return annotationView
+      }
     
     // MARK: 12) action to execute when user taps annotation views accessory buttons
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+      func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         // 14) performSegue to PostImageVC
-        
-    }
+        self.performSegue(withIdentifier: "toPostImageVC", sender: nil)
+      }
     
     
     
     // MARK: 19) Conform to PostImageViewDelegate protocol
-    func imageSelected(controller: PostImageViewController, image: UIImage) {
+      func imageSelected(controller: PostImageViewController, image: UIImage) {
         // 9) Add info button to annotation view
-
-    }
+        let annotationViewButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        annotationViewButton.setImage(image, for: .normal)
+        self.annotationView?.leftCalloutAccessoryView = annotationViewButton
+      }
     
     
     
